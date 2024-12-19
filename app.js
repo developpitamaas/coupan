@@ -5,7 +5,7 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 
-const port = 3000;
+const port = 5005;
 
 // Function to calculate the final discounted price and discount percentage
 function calculateFinalPrice(price1, price2, finalPrice) {
@@ -62,6 +62,9 @@ app.get('/calculate', (req, res) => {
       discountPercentage: discountPercentage.toFixed(2)  // Returning the discount percentage as a formatted string
     });
 });
+app.get("/",(req,res)=>{
+  res.send("vaibhav its running")
+})
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
