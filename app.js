@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-
+const Mail = require("./route/mail")
 app.use(cors());
 app.use(express.json());
 
@@ -31,6 +31,9 @@ function calculateFinalPrice(price1, price2, finalPrice) {
     // Return both the discounted price and the discount percentage
     return { discountedPrice, discountPercentage };
 }
+
+
+app.use("/mail",Mail)
 
 app.get('/calculate', (req, res) => {
     // Extract price1, price2, finalPrice from query parameters
