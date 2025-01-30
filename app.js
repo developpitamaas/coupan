@@ -5,7 +5,7 @@ const Mail = require("./route/mail")
 app.use(cors());
 app.use(express.json());
 
-const port = 5005;
+const port = 5009;
 
 // Function to calculate the final discounted price and discount percentage
 function calculateFinalPrice(price1, price2, finalPrice) {
